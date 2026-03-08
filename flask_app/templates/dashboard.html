@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Heart Disease Analysis{% endblock %}
+
+{% block extra_css %}
+<style>
+    #tableauViz {
+        width: 100%;
+        height: 800px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="mb-4">Heart Disease Analysis Dashboard</h1>
+    
+    <div class="alert alert-info">
+        <strong>Interactive Dashboard:</strong> Use filters to explore data by age, gender, cholesterol levels, and other risk factors.
+    </div>
+
+    <!-- Tableau Dashboard Embed -->
+    <div id="tableauViz">
+        <div class="text-center p-5">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading dashboard...</span>
+            </div>
+            <p class="mt-3">Loading Tableau Dashboard...</p>
+            <p class="text-muted">
+                <small>To embed your Tableau dashboard, update the configuration in .env file with your Tableau Server details.</small>
+            </p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Total Patients</h5>
+                    <p class="display-6" id="totalPatients">303</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Disease Rate</h5>
+                    <p class="display-6" id="diseaseRate">54.5%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Avg Age</h5>
+                    <p class="display-6" id="avgAge">54.4</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">High Risk</h5>
+                    <p class="display-6" id="highRisk">87</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+<script>
+    // Tableau JavaScript API integration
+    // Replace with your actual Tableau dashboard URL
+    const tableauUrl = "{{ config.server_url }}/views/{{ config.dashboard_name }}";
+    
+    // Initialize Tableau viz
+    function initViz() {
+        const containerDiv = document.getElementById("tableauViz");
+        const options = {
+            hideTabs: true,
+            hideToolbar: false,
+            width: "100%",
+            height: "800px"
+        };
+        
+        // Uncomment when you have a valid Tableau URL
+        // const viz = new tableau.Viz(containerDiv, tableauUrl, options);
+    }
+    
+    // Load stats from API
+    fetch('/api/stats')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('totalPatients').textContent = data.total_patients;
+            document.getElementById('diseaseRate').textContent = data.disease_prevalence + '%';
+            document.getElementById('avgAge').textContent = data.avg_age;
+            document.getElementById('highRisk').textContent = data.high_risk_patients;
+        });
+</script>
+{% endblock %}
