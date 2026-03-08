@@ -82,10 +82,5 @@ heart-disease-analysis/
 └── README.md
 ```
 
-## Demo Links
-- **GitHub Repository**: https://github.com/arpitpandey0307/Heart-disease-analysis
-- **Live Dashboard**: [Add link here]
-- **Video Demonstration**: [Add link here]
-
 ## License
 MIT License
