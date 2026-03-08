@@ -3,6 +3,8 @@
 ## Project Overview
 Heart disease remains one of the leading causes of mortality worldwide. This project uses **Tableau** as a powerful data visualization and business intelligence tool to analyze heart disease data, transform raw data into meaningful dashboards, and identify correlations that support better decision-making for healthcare providers and policymakers.
 
+This project applies descriptive and diagnostic analytics techniques using Tableau to examine large-scale heart disease data. Through segmentation, correlation analysis, and interactive visualization, the dashboards reveal patterns between lifestyle factors, demographic variables, and clinical indicators contributing to cardiovascular risk.
+
 ## Technical Architecture
 ```
 Google Drive/Database → Tableau → Dashboard → Tableau Server → Flask UI → End User
@@ -58,8 +60,8 @@ Anita, a 45-year-old professional, monitors her health risks using simplified Ta
 ### Installation
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd heart-disease-analysis
+git clone https://github.com/arpitpandey0307/Heart-disease-analysis.git
+cd Heart-disease-analysis
 
 # Install Python dependencies
 pip install -r requirements.txt
@@ -81,8 +83,8 @@ heart-disease-analysis/
 ```
 
 ## Demo Links
+- **GitHub Repository**: https://github.com/arpitpandey0307/Heart-disease-analysis
 - **Live Dashboard**: [Add link here]
-- **GitHub Repository**: [Add link here]
 - **Video Demonstration**: [Add link here]
 
 ## License
