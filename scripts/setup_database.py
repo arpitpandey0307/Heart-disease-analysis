@@ -138,13 +138,20 @@ def main():
         db.close()
         return
     
-    # Load data
-    csv_path = '../data/heart_disease_raw.csv'
-    if os.path.exists(csv_path):
-        db.load_data(csv_path)
-    else:
-        print(f"✗ Data file not found: {csv_path}")
-        print("Please run download_dataset.py first")
+    # Load data - try multiple file names
+    csv_paths = ['../data/Heart_new2.csv', '../data/heart_disease_raw.csv', 'data/Heart_new2.csv', 'Heart_new2.csv']
+    
+    loaded = False
+    for csv_path in csv_paths:
+        if os.path.exists(csv_path):
+            print(f"Found data file: {csv_path}")
+            db.load_data(csv_path)
+            loaded = True
+            break
+    
+    if not loaded:
+        print(f"✗ Data file not found. Tried: {csv_paths}")
+        print("Please ensure Heart_new2.csv is in the data/ directory")
     
     # Close connection
     db.close()

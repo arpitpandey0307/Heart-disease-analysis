@@ -25,6 +25,7 @@ def connect_to_database():
         return connection
     except Error as e:
         print(f"✗ Error connecting to database: {e}")
+        print("Note: Make sure to run setup_database.py first!")
         return None
 
 def prepare_visualization_data(connection):
