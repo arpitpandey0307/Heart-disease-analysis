@@ -14,14 +14,14 @@ Google Drive/Database → Tableau → Dashboard → Tableau Server → Flask UI 
 
 ### Data Collection & Storage
 - **Atul Singh**: Downloading the dataset
-- **Cyrus Prakash Tiwari**: Storing Data in DB & Perform SQL Operations medium
+- **Gyan Prakash Tiwari**: Storing Data in DB & Perform SQL Operations medium
 
 ### Database Integration
 - **Arpit Pandey**: Connect DB with Tableau, Amount of Data to DB, Publishing
 
 ### Data Preparation & Visualization
 - **Atul Raj Gautam**: Prepare Data for Visualization, Responsive Design of Dashboard, No of Scenes of Story
-- **Cyrus Prakash Tiwari**: No of Unique Visualizations, No of Calculation Fields
+- **Gyan Prakash Tiwari**: No of Unique Visualizations, No of Calculation Fields
 
 ### Performance & Web Integration
 - **Arpit Pandey**: Utilization of Data Filters, No of Visualizations/Graphs

@@ -1,5 +1,5 @@
 -- Create database for Heart Disease Analysis
--- Author: Cyrus Prakash Tiwari
+-- Author: Gyan Prakash Tiwari
 -- Task: Storing Data in DB & Perform SQL Operations
 
 CREATE DATABASE IF NOT EXISTS heart_disease_db;

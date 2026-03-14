@@ -1,5 +1,5 @@
 -- SQL Analysis Queries for Heart Disease Data
--- Author: Cyrus Prakash Tiwari
+-- Author: Gyan Prakash Tiwari
 
 USE heart_disease_db;
 

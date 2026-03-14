@@ -1,6 +1,6 @@
 """
 Setup Database and Load Data
-Author: Cyrus Prakash Tiwari & Arpit Pandey
+Author: Gyan Prakash Tiwari & Arpit Pandey
 Task: Storing Data in DB & Connect DB with Tableau
 """
 
