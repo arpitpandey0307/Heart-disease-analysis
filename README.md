@@ -56,6 +56,13 @@ Anita, a 45-year-old professional, monitors her health risks using simplified Ta
 ✅ Data preparation and analysis complete
 ✅ Tableau dashboard design documented
 ✅ All documentation complete
+✅ **Live Demo**: https://heart-disease-analysis.vercel.app
+✅ **Tableau Dashboard**: https://public.tableau.com/app/profile/arpit.pandey3977/viz/Heart-Disease-Analysis_17734963726400/Dashboard1
+
+## Demo Links
+- **Live Application**: [https://heart-disease-analysis.vercel.app](https://heart-disease-analysis.vercel.app)
+- **GitHub Repository**: [https://github.com/arpitpandey0307/Heart-disease-analysis](https://github.com/arpitpandey0307/Heart-disease-analysis)
+- **Tableau Public Dashboard**: [View Dashboard](https://public.tableau.com/app/profile/arpit.pandey3977/viz/Heart-Disease-Analysis_17734963726400/Dashboard1)
 
 ## Setup Instructions
 
