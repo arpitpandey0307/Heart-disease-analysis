@@ -6,16 +6,13 @@ Task: Dashboard and Story embed with UI With Flask
 
 from flask import Flask, render_template, jsonify
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev-secret-key')
+app.config['SECRET_KEY'] = 'dev-secret-key-heart-disease-2024'
 
 # Tableau Server Configuration
-TABLEAU_SERVER_URL = os.getenv('TABLEAU_SERVER_URL', 'https://your-tableau-server.com')
-TABLEAU_SITE_ID = os.getenv('TABLEAU_SITE_ID', 'your_site_id')
+TABLEAU_SERVER_URL = 'https://public.tableau.com'
+TABLEAU_SITE_ID = 'heart-disease-analysis'
 
 @app.route('/')
 def index():
